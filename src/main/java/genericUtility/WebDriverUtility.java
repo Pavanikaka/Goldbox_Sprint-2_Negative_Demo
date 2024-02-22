@@ -51,7 +51,7 @@ public class WebDriverUtility {
 	 */
 	public void waitUntilPageLoad(WebDriver driver)
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 	}
 	/**
 	 * This method will wait until element is clickable
@@ -59,7 +59,7 @@ public class WebDriverUtility {
 	 */
 	public void waitForElementToBeClickable(WebDriver driver,WebElement element)
 	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(50));
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 	/**
@@ -68,7 +68,7 @@ public class WebDriverUtility {
 	 */
 	public void waitForElementToBeVisible(WebDriver driver,WebElement element)
 	{
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(50));
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
@@ -79,7 +79,7 @@ public class WebDriverUtility {
 	 */
 	public void waitUntilAlertIsPresent(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
 		wait.until(ExpectedConditions.alertIsPresent());
 	}
 	/**

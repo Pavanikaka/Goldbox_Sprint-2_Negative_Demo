@@ -36,7 +36,7 @@ public class FMS_BaseClass {
 			System.out.println("---Database Connection Successfully---");
 		}
 		
-	    @BeforeClass (groups={"sprint-1"})
+	    @BeforeClass (groups={"sprint-1","Sprint-2"})
 		public void bcConfig() throws Exception
 		{  
 			String BROWSER = pUtility.readDataFromPropertyFile("browser");
@@ -89,7 +89,7 @@ public class FMS_BaseClass {
 			driver.get(URL);
 		}
 		
-	@BeforeMethod(groups={"sprint-1"})
+	@BeforeMethod(groups={"sprint-1","Sprint-2"})
 		public void bmConfig() throws Exception, Exception
 		{
 		    
@@ -102,7 +102,7 @@ public class FMS_BaseClass {
 			System.out.println("---Login successfully---");
 		}
         
-	@AfterMethod(groups={"sprint-1"})
+	@AfterMethod(groups={"sprint-1","Sprint-2"})
 		public void amConfig() throws Exception
 		{
 		    Thread.sleep(3000);
@@ -118,7 +118,7 @@ public class FMS_BaseClass {
 		    System.out.println("Logout Successfully");
 		}
         
-	@AfterClass(groups={"sprint-1"})
+	@AfterClass(groups={"sprint-1","Sprint-2"})
 		public void acConfig() throws InterruptedException
 		{
 		try {
@@ -132,7 +132,7 @@ public class FMS_BaseClass {
 		}
 		}
         
-	@AfterSuite(groups={"sprint-1"})
+	@AfterSuite(groups={"sprint-1","Sprint-2"})
 		public void asConfig()
 		{
 		   System.out.println("---Database Closed Successful---");

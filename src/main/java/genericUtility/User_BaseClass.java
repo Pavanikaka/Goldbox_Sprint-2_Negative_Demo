@@ -36,7 +36,7 @@ public class User_BaseClass {
 			System.out.println("---Database Connection Successfully---");
 		}
 		
-	    @BeforeClass (groups={"sprint-1"})
+	    @BeforeClass (groups={"sprint-1","Sprint-2"})
 		public void bcConfig() throws Exception
 		{  
 			String BROWSER = pUtility.readDataFromPropertyFile("browser");
@@ -89,7 +89,7 @@ public class User_BaseClass {
 			driver.get(URL);
 		}
 		
-	@BeforeMethod(groups={"sprint-1"})
+	@BeforeMethod(groups={"sprint-1","Sprint-2"})
 		public void bmConfig() throws Exception, Exception
 		{
 		    String MOBILENUMBER = pUtility.readDataFromPropertyFile("mobilenumber");
@@ -106,7 +106,7 @@ public class User_BaseClass {
 			System.out.println("---Login successfully---");
 		}
         
-	@AfterMethod(groups={"sprint-1"})
+	@AfterMethod(groups={"sprint-1","Sprint-2"})
 		public void amConfig() throws Exception
 		{
 		    Thread.sleep(3000);
@@ -117,7 +117,7 @@ public class User_BaseClass {
 		    System.out.println("Logout Successfully");
 		}
         
-	@AfterClass(groups={"sprint-1"})
+	@AfterClass(groups={"sprint-1","Sprint-2"})
 		public void acConfig() throws InterruptedException
 		{
 		try {
@@ -131,7 +131,7 @@ public class User_BaseClass {
 		}
 		}
         
-	@AfterSuite(groups={"sprint-1"})
+	@AfterSuite(groups={"sprint-1","Sprint-2"})
 		public void asConfig()
 		{
 		   System.out.println("---Database Closed Successful---");

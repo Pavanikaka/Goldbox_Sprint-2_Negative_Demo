@@ -5,7 +5,7 @@
     <classes>
       <class name="sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS">
         <methods>
-          <include name="clickingOnUPIorQRAndClickOnUpiIdOrMobileNumberCheckBoxError33Test"/>
+          <include name="a1_loginByGivingInvalidEmailErrorTest"/>
         </methods>
       </class> <!-- sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS -->
     </classes>
