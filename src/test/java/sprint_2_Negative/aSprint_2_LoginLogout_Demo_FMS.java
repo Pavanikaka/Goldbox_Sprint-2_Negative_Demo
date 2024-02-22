@@ -3047,7 +3047,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 				try 
 				{
 					Thread.sleep(2000);
-					driver.findElement(By.xpath("a"));
 				} 
 				finally 
 				{
