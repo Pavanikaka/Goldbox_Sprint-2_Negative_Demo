@@ -25,12 +25,12 @@ import objectRepository.Scheme_SchemesList_ActionInfoBtn_SchemeInfo_AddFeaturePa
 import objectRepository.SchemesPage;
 import objectRepository.Schemes_SchemeListPage;
 
-public class aSprint_2_LoginLogout_Demo_FMS {
+public class Sprint_2_Negative_Demo_FMS {
 
 	WebDriverUtility wUtil = new WebDriverUtility();
 	JavaUtility jUtil = new JavaUtility();
 	
-	String SchemeName = "Scheme"+jUtil.getRandomNum();
+	String SchemeName = "Scheme"+jUtil.getRandomMobileNum();
 	
 	@Test(groups = "sprint-2", priority = 1)
 	public void a1_loginByGivingInvalidEmailErrorTest() throws Exception
@@ -2152,7 +2152,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 			try 
 			{
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2177,7 +2176,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 			try 
 			{
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2202,7 +2200,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 			try 
 			{
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2229,7 +2226,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 			try 
 			{
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2334,7 +2330,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 		    try 
 			{
 		    	Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2450,7 +2445,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 		    try 
 			{
 		    	Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2491,7 +2485,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 	        try 
 			{
 	        	Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2550,7 +2543,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 			try 
 			{
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
@@ -2611,7 +2603,6 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 			    catch (Exception e) 
 			    {
 					Thread.sleep(1000);
-					
 				}
 			    
     		        WebElement MonthsDrpDwn = driver.findElement(By.xpath("//select[@formcontrolname='total_installments']"));
@@ -2660,12 +2651,12 @@ public class aSprint_2_LoginLogout_Demo_FMS {
     				try 
     				{
     					Thread.sleep(2000);
-    					driver.findElement(By.xpath("a"));
     				} 
     				finally 
     				{
     					driver.quit();
     				}
+    				
 				}
 		
 		@Test(groups = "sprint-2", priority = 33)
@@ -2771,17 +2762,15 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 				else  
 				{
 	                System.out.println("Pay Amount Page Moved To Next Page Successfully");
-				}
-				
-				try 
-				{
-					Thread.sleep(2000);
-					driver.findElement(By.xpath("a"));
-				} 
-				finally 
-				{
-					driver.quit();
-				}
+				}	
+			}
+	        try 
+			{
+				Thread.sleep(2000);
+			} 
+			finally 
+			{
+				driver.quit();
 			}
     		        
 		}
@@ -2905,21 +2894,19 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 				
 				wUtil.takeScreenShot(driver, "a34_whileSubscribingSchemeClickOnTheFailureButtonInTheRazorPayPagePaymentShouldPassErrorTest");
 		        
-				Thread.sleep(2000);
-				
-				try 
-				{
-					Thread.sleep(2000);
-					driver.findElement(By.xpath("a"));
-				} 
-				finally 
-				{
-					driver.quit();
-				}
-				
-				
+				Thread.sleep(2000);				
 		        
 	        }
+	        
+	        try 
+			{
+				Thread.sleep(2000);
+			} 
+			finally 
+			{
+				driver.quit();
+			}
+	        
 		}
 		
 		
@@ -3042,19 +3029,19 @@ public class aSprint_2_LoginLogout_Demo_FMS {
 				
 				wUtil.takeScreenShot(driver, "a35_whileSubscribingSchemeClickOnTheSuccessButtonInTheRazorPayPagePaymentShouldFailErrorTest");
 		        
-				Thread.sleep(2000);
-				
-				try 
-				{
-					Thread.sleep(2000);
-				} 
-				finally 
-				{
-					driver.quit();
-				}
-				
+				Thread.sleep(2000);				
 		        
 	        }
+	        
+	        try 
+			{
+				Thread.sleep(2000);
+			} 
+			finally 
+			{
+				driver.quit();
+			}
+	        
 		}
 		
 		

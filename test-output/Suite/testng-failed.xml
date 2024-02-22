@@ -5,23 +5,29 @@
     <classes>
       <class name="sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS">
         <methods>
-          <include name="g_schemeCreatingWithoutGivingCountryDrpDwnErrorButPass7Test"/>
-          <include name="u_actionInfoSchemeFaqAddingByGivingValidDataPass21Test"/>
-          <include name="j_schemeCreatingByGivingAllSchemeDetailsPass10Test"/>
-          <include name="r_actionInfoSchemeTermsAndConditionsAddingByGivingValidDataPass18Test"/>
-          <include name="p_actionInfoSchemeContentAddingWithoutGivingDataError16Test"/>
-          <include name="e_clickOnUserLinkSchemesPageShouldOpenError5Test"/>
-          <include name="k_addingTenureListDetailsWithoutGivingAnyDetailsError11Test"/>
-          <include name="l_addingTenureListDetailsByGivingAllDetailsPass12Test"/>
-          <include name="v_actionInfoSchemeFaqAddingWithoutGivingDataPageStaticError22Test"/>
-          <include name="n_addingTenureAmountDetailsByGivingAllPositiveDetailsPass14Test"/>
-          <include name="ze_creatingSchemeWithoutGivingDataError31Test"/>
-          <include name="t_actionInfoSchemeFeatureAddingWithoutGivingDataPageStaticError20Test"/>
-          <include name="s_actionInfoSchemeFeatureAddingByGivingValidDataPass19Test"/>
-          <include name="o_actionInfoSchemeContentAddingByGivingValidDataPass15Test"/>
-          <include name="m_addingTenureAmountDetailsWithoutGivingAnyDetailsError13Test"/>
-          <include name="d_clickOnEcommerceSchemesPageShouldOpenError4Test"/>
-          <include name="zc_schemeBootstrapBtnEnablingAndCheckingSchemeIsDisabledInUserPannelError29Test"/>
+          <include name="a21_actionInfoSchemeFaqAddingByGivingValidDataPassTest"/>
+          <include name="a33_clickingOnUPIorQRAndClickOnUpiIdOrMobileNumberCheckBoxErrorTest"/>
+          <include name="a13_addingTenureAmountDetailsWithoutGivingAnyDetailsErrorTest"/>
+          <include name="a26_loginWithoutGivingPasswordErrorTest"/>
+          <include name="a19_actionInfoSchemeFeatureAddingByGivingValidDataPassTest"/>
+          <include name="a12_addingTenureListDetailsByGivingAllDetailsPassTest"/>
+          <include name="a34_whileSubscribingSchemeClickOnTheFailureButtonInTheRazorPayPagePaymentShouldPassErrorTest"/>
+          <include name="a15_actionInfoSchemeContentAddingByGivingValidDataPassTest"/>
+          <include name="a31_creatingSchemeWithoutGivingDataErrorTest"/>
+          <include name="a32_clickingOnPayNowBtnWithOutSelectingPaymentModeTest"/>
+          <include name="a29_schemeBootstrapBtnEnablingAndCheckingSchemeIsDisabledInUserPannelErrorTest"/>
+          <include name="a18_actionInfoSchemeTermsAndConditionsAddingByGivingValidDataPassTest"/>
+          <include name="a14_addingTenureAmountDetailsByGivingAllPositiveDetailsPassTest"/>
+          <include name="a22_actionInfoSchemeFaqAddingWithoutGivingDataPageStaticErrorTest"/>
+          <include name="a38_loginWithoutByGivingLessThan10NumbersInMobileNumberTextFieldErrorTest"/>
+          <include name="a30_clickOnDashboardSchemePageShouldBeDisplayedErrorTest"/>
+          <include name="a17_actionInfoSchemeTermsAndConditionsAddingWithoutGivingDataErrorTest"/>
+          <include name="a27_loginByGivingEmailAsPwdAndPasswordAsEmailErrorTest"/>
+          <include name="a28_schemeBootstrapBtnDisablingAndCheckingSchemeIsEnabledInUserPannelErrorTest"/>
+          <include name="a16_actionInfoSchemeContentAddingWithoutGivingDataErrorTest"/>
+          <include name="a25_loginWithoutGivingEmailErrorTest"/>
+          <include name="a24_loginWithoutGivingEmailAndPasswordErrorTest"/>
+          <include name="a20_actionInfoSchemeFeatureAddingWithoutGivingDataPageStaticErrorTest"/>
         </methods>
       </class> <!-- sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS -->
     </classes>

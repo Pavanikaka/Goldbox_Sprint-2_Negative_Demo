@@ -49,7 +49,7 @@ public class JavaUtility {
 		}
 		
 		
-		public long getRandomMobileNum() throws Exception 
+		public long getRandomMobileNum() 
 		{
 			Random r = new Random();
 			long mobileNumber=0;
@@ -67,7 +67,7 @@ public class JavaUtility {
 			   }
 			   catch (Exception e) 
 			   {
-				   Thread.sleep(1);
+				   
 			   }
 			   
 			}
