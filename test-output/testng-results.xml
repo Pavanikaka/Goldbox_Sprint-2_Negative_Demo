@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="34" total="35" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-22T12:19:37 IST" name="Default suite" finished-at="2024-02-22T12:20:38 IST" duration-ms="60821">
+    <groups>
+      <group name="sprint-2">
+        <method signature="aSprint_2_LoginLogout_Demo_FMS.zi_whileSubscribingSchemeClickOnTheSuccessButtonInTheRazorPayPagePaymentShouldFailError35Test()[pri:35, instance:sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS@14cd1699]" name="zi_whileSubscribingSchemeClickOnTheSuccessButtonInTheRazorPayPagePaymentShouldFailError35Test" class="sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS"/>
+      </group> <!-- sprint-2 -->
+    </groups>
+    <test started-at="2024-02-22T12:19:37 IST" name="Default test" finished-at="2024-02-22T12:20:38 IST" duration-ms="60821">
+      <class name="sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS">
+        <test-method signature="zi_whileSubscribingSchemeClickOnTheSuccessButtonInTheRazorPayPagePaymentShouldFailError35Test()[pri:35, instance:sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS@14cd1699]" started-at="2024-02-22T12:19:37 IST" name="zi_whileSubscribingSchemeClickOnTheSuccessButtonInTheRazorPayPagePaymentShouldFailError35Test" finished-at="2024-02-22T12:20:38 IST" duration-ms="60758" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- zi_whileSubscribingSchemeClickOnTheSuccessButtonInTheRazorPayPagePaymentShouldFailError35Test -->
+      </class> <!-- sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
