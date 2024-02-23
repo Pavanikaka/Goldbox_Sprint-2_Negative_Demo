@@ -135,12 +135,37 @@ public class Scheme_SchemesList_ActionInfoBtn_SchemeInfoPage {
     	Thread.sleep(3000);
     }
     
+    public void clearAndAddContent(String Content) throws Exception
+    {
+    	Thread.sleep(2000);
+    	ContentEdt.clear();
+    	Thread.sleep(2000);
+    	ContentEdt.sendKeys(Content);
+    	Thread.sleep(2000);
+    	ContentAddBtn.click();
+    	Thread.sleep(2000);
+    }
     
     public void addSchemeTermsAndConditions(WebDriver driver, String TermsAndConditions) throws Exception
     {
     	Thread.sleep(3000);
     	SchemeTermsAndConditionEdt.sendKeys(TermsAndConditions);
     	Thread.sleep(3000);
+    	Robot r = new Robot();
+    	r.keyPress(KeyEvent.VK_PAGE_DOWN);
+    	r.keyRelease(KeyEvent.VK_PAGE_DOWN);
+    	Thread.sleep(2000);
+    	SchemeTermsAndConditionAddBtn.click();
+    	Thread.sleep(2000);
+    }
+    
+    public void clearAndAddSchemeTermsAndConditions(WebDriver driver, String TermsAndConditions) throws Exception
+    {
+    	Thread.sleep(2000);
+    	SchemeTermsAndConditionEdt.clear();
+    	Thread.sleep(2000);
+    	SchemeTermsAndConditionEdt.sendKeys(TermsAndConditions);
+    	Thread.sleep(2000);
     	Robot r = new Robot();
     	r.keyPress(KeyEvent.VK_PAGE_DOWN);
     	r.keyRelease(KeyEvent.VK_PAGE_DOWN);

@@ -80,6 +80,14 @@ public class JavaUtility {
 			int num = r.nextInt(12);
 			return num;
 		}
+		
+		
+		public Long getHighestRandomNumber()
+		{
+			Random r = new Random();
+			Long Num = r.nextLong(999999999999999999l);
+			return Num;
+		}
 
 	
 

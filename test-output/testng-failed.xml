@@ -1,35 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="1" parallel="tests" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS">
+      <class name="sprint_2_Negative.Sprint_2_Negative_Demo_FMS">
         <methods>
-          <include name="a21_actionInfoSchemeFaqAddingByGivingValidDataPassTest"/>
-          <include name="a33_clickingOnUPIorQRAndClickOnUpiIdOrMobileNumberCheckBoxErrorTest"/>
-          <include name="a13_addingTenureAmountDetailsWithoutGivingAnyDetailsErrorTest"/>
-          <include name="a26_loginWithoutGivingPasswordErrorTest"/>
-          <include name="a19_actionInfoSchemeFeatureAddingByGivingValidDataPassTest"/>
           <include name="a12_addingTenureListDetailsByGivingAllDetailsPassTest"/>
-          <include name="a34_whileSubscribingSchemeClickOnTheFailureButtonInTheRazorPayPagePaymentShouldPassErrorTest"/>
-          <include name="a15_actionInfoSchemeContentAddingByGivingValidDataPassTest"/>
-          <include name="a31_creatingSchemeWithoutGivingDataErrorTest"/>
-          <include name="a32_clickingOnPayNowBtnWithOutSelectingPaymentModeTest"/>
-          <include name="a29_schemeBootstrapBtnEnablingAndCheckingSchemeIsDisabledInUserPannelErrorTest"/>
-          <include name="a18_actionInfoSchemeTermsAndConditionsAddingByGivingValidDataPassTest"/>
-          <include name="a14_addingTenureAmountDetailsByGivingAllPositiveDetailsPassTest"/>
-          <include name="a22_actionInfoSchemeFaqAddingWithoutGivingDataPageStaticErrorTest"/>
-          <include name="a38_loginWithoutByGivingLessThan10NumbersInMobileNumberTextFieldErrorTest"/>
-          <include name="a30_clickOnDashboardSchemePageShouldBeDisplayedErrorTest"/>
-          <include name="a17_actionInfoSchemeTermsAndConditionsAddingWithoutGivingDataErrorTest"/>
-          <include name="a27_loginByGivingEmailAsPwdAndPasswordAsEmailErrorTest"/>
-          <include name="a28_schemeBootstrapBtnDisablingAndCheckingSchemeIsEnabledInUserPannelErrorTest"/>
-          <include name="a16_actionInfoSchemeContentAddingWithoutGivingDataErrorTest"/>
-          <include name="a25_loginWithoutGivingEmailErrorTest"/>
-          <include name="a24_loginWithoutGivingEmailAndPasswordErrorTest"/>
-          <include name="a20_actionInfoSchemeFeatureAddingWithoutGivingDataPageStaticErrorTest"/>
         </methods>
-      </class> <!-- sprint_2_Negative.aSprint_2_LoginLogout_Demo_FMS -->
+      </class> <!-- sprint_2_Negative.Sprint_2_Negative_Demo_FMS -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

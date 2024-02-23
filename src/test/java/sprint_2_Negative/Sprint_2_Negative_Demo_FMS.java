@@ -30,11 +30,9 @@ public class Sprint_2_Negative_Demo_FMS {
 	WebDriverUtility wUtil = new WebDriverUtility();
 	JavaUtility jUtil = new JavaUtility();
 	
-	String SchemeName = "Scheme"+jUtil.getRandomMobileNum();
-	
 	@Test(groups = "sprint-2", priority = 1)
 	public void a1_loginByGivingInvalidEmailErrorTest() throws Exception
-	{
+	{		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -355,6 +353,8 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 9)
 		public void a9_schemeCreatingWithoutGivingSchemeDescriptionErrorTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
+			
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -423,6 +423,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 10)
 		public void a10_schemeCreatingByGivingAllSchemeDetailsPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -497,25 +498,6 @@ public class Sprint_2_Negative_Demo_FMS {
 				driver.quit();
 			}
 			
-//			WebElement FirstSchemeElement = driver.findElement(By.xpath("(//h4[.='Schemes List']/ancestor::div[@class='page-header']/following-sibling::div[@class='card-body']//td)[1]"));
-//			
-//			String FrstScheme = FirstSchemeElement.getText();
-//			
-//			if(FrstScheme.contains(SchemeName))
-//			{
-//				Thread.sleep(1000);
-//				wUtil.takeScreenShot(driver, "schemeCreatingByGivingAllSchemeDetailsTest");
-//				System.out.println("Scheme Created");
-//				Thread.sleep(2000);
-//				driver.quit();
-//			}
-//			else 
-//			{
-//				System.out.println("Scheme Not Created");
-//				Thread.sleep(2000);
-//				driver.quit();
-//			}
-			
 			
 		}
 		
@@ -523,7 +505,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 11)
 		public void a11_addingTenureListDetailsWithoutGivingAnyDetailsErrorTest() throws Exception
 		{
-			String SchemeName = "Scheme"+jUtil.getRandomNum();
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -607,13 +589,23 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 12)
 		public void a12_addingTenureListDetailsByGivingAllDetailsPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 						
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get("http://stg-fms-goldbox.goldsikka.com/signin");
+			
+			Thread.sleep(2000);
+			
 			driver.findElement(By.xpath("//input[@placeholder='Enter your email address']")).sendKeys("soumya@gmail.com");
+			
+			Thread.sleep(2000);
+			
 			driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("goldsikka@2023");
+			
+			Thread.sleep(2000);
+			
 			driver.findElement(By.xpath("//button[.=' Sign In ']")).click();
 			Thread.sleep(10000);
 			
@@ -651,7 +643,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -697,7 +689,9 @@ public class Sprint_2_Negative_Demo_FMS {
 		
 		@Test(groups = "sprint-2", priority = 13)
 		public void a13_addingTenureAmountDetailsWithoutGivingAnyDetailsErrorTest() throws Exception
-		{			
+		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
+			
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -741,7 +735,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -802,6 +796,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 14)
 		public void a14_addingTenureAmountDetailsByGivingAllPositiveDetailsPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			
 			WebDriver driver = new ChromeDriver();
@@ -847,7 +842,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -916,6 +911,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 15)
 		public void a15_actionInfoSchemeContentAddingByGivingValidDataPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			
@@ -962,7 +958,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1009,7 +1005,13 @@ public class Sprint_2_Negative_Demo_FMS {
 			WebElement CloseBtnElement = driver.findElement(By.xpath("//h1[.='Manage Tenure Amount']/following-sibling::button[@aria-label='Close']"));
 			CloseBtnElement.click();
 			
+			Thread.sleep(2000);
+			
 			driver.findElement(By.xpath("(//h4[.='Schemes List']/ancestor::div[@class='card-header']//td[.='"+SchemeName+"']/following-sibling::td/button[.=' Info '])[3]")).click();
+			
+			Thread.sleep(2000);
+			
+			driver.findElement(By.xpath("//textarea[@formcontrolname='content']")).clear();
 			
 			Thread.sleep(2000);
 			
@@ -1017,7 +1019,19 @@ public class Sprint_2_Negative_Demo_FMS {
 			
             Thread.sleep(2000);
 			
-			driver.findElement(By.xpath("//textarea[@formcontrolname='content']/../following-sibling::div/button[.='Add']")).click();
+            try 
+            {
+            	WebElement AddBtn = driver.findElement(By.xpath("//textarea[@formcontrolname='content']/../following-sibling::div/button[.='Add']"));
+    			
+    			AddBtn.click();
+			} 
+            catch(Exception e) 
+            {
+            	WebElement UpdateBtn = driver.findElement(By.xpath("//b[.='Scheme Content']/../../following-sibling::form//button[.='Update']"));
+            	
+            	UpdateBtn.click();
+			}
+            
 			
 			Thread.sleep(2000);
 			
@@ -1029,8 +1043,6 @@ public class Sprint_2_Negative_Demo_FMS {
 				{
 					Thread.sleep(1000);
 					wUtil.takeScreenShot(driver, "a15_actionInfoSchemeContentAddingByGivingValidDataPassTest");
-					Thread.sleep(1000);
-					driver.findElement(By.xpath("//div[.='Manage Tenure Amount']//button[@aria-label='Close']")).click();
 					Thread.sleep(1000);
 				}
 			} 
@@ -1047,6 +1059,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 16)
 		public void a16_actionInfoSchemeContentAddingWithoutGivingDataErrorTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			
 			WebDriver driver = new ChromeDriver();
@@ -1092,7 +1105,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1152,8 +1165,6 @@ public class Sprint_2_Negative_Demo_FMS {
 					Thread.sleep(1000);
 					wUtil.takeScreenShot(driver, "a16_actionInfoSchemeContentAddingWithoutGivingDataErrorTest");
 					Thread.sleep(1000);
-					driver.findElement(By.xpath("//div[.='Manage Tenure Amount']//button[@aria-label='Close']")).click();
-					Thread.sleep(1000);
 				}
 			} 
 			finally 
@@ -1170,6 +1181,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 17)
 		public void a17_actionInfoSchemeTermsAndConditionsAddingWithoutGivingDataErrorTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			
@@ -1216,7 +1228,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1275,7 +1287,15 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			Thread.sleep(5000);
 			
+			wUtil.scrollPageDown();
+			
+			driver.findElement(By.xpath("//textarea[@formcontrolname='tc']")).clear();
+			
+			Thread.sleep(2000);
+			
 			driver.findElement(By.xpath("//textarea[@formcontrolname='tc']/../following-sibling::div/button[.='Add']")).click();
+			
+			Thread.sleep(1000);
 			
 			WebElement ErrorElement = driver.findElement(By.xpath("(//div [.=' Please Enter Terms & Conditions '])[2]"));
 			
@@ -1283,7 +1303,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			{
 				if(ErrorElement.isDisplayed())
 				{
-					Thread.sleep(2000);
+					Thread.sleep(1000);
 					wUtil.takeScreenShot(driver, "a17_actionInfoSchemeTermsAndConditionsAddingWithoutGivingDataErrorTest");
 					Thread.sleep(1000);
 				}
@@ -1300,6 +1320,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 18)
 		public void a18_actionInfoSchemeTermsAndConditionsAddingByGivingValidDataPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			
@@ -1346,7 +1367,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1436,6 +1457,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 19)
 		public void a19_actionInfoSchemeFeatureAddingByGivingValidDataPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			
@@ -1482,7 +1504,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1592,6 +1614,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 20)
 		public void a20_actionInfoSchemeFeatureAddingWithoutGivingDataPageStaticErrorTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			
@@ -1602,7 +1625,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			driver.findElement(By.xpath("//input[@placeholder='Enter your email address']")).sendKeys("soumya@gmail.com");
 			driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("goldsikka@2023");
 			driver.findElement(By.xpath("//button[.=' Sign In ']")).click();
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 			
 			DashboardPage dPage = new DashboardPage(driver);
 			wUtil.waitForElementToBeClickable(driver, dPage.getSchemesDrpDwn());
@@ -1638,7 +1661,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1743,6 +1766,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 21)
 		public void a21_actionInfoSchemeFaqAddingByGivingValidDataPassTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			
@@ -1789,7 +1813,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -1924,6 +1948,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		@Test(groups = "sprint-2", priority = 22)
 		public void a22_actionInfoSchemeFaqAddingWithoutGivingDataPageStaticErrorTest() throws Exception
 		{
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			String Amt = "1000";
 			String Content = "Content";
 			String TermsAndConditions = "Terms And Conditions";
@@ -1973,7 +1998,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -2028,11 +2053,11 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			Thread.sleep(2000);
 			
-			ssasiPage.addContent(Content);
+			ssasiPage.clearAndAddContent(Content);
 			
 			Thread.sleep(2000);
 			
-			ssasiPage.addSchemeTermsAndConditions(driver, TermsAndConditions);
+			ssasiPage.clearAndAddSchemeTermsAndConditions(driver, TermsAndConditions);
 			
 			Thread.sleep(2000);
 			
@@ -2239,6 +2264,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		public void a28_schemeBootstrapBtnDisablingAndCheckingSchemeIsEnabledInUserPannelErrorTest() throws Exception
 		{
 			PropertyFileUtility pUtil = new PropertyFileUtility();
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -2347,6 +2373,7 @@ public class Sprint_2_Negative_Demo_FMS {
 		public void a29_schemeBootstrapBtnEnablingAndCheckingSchemeIsDisabledInUserPannelErrorTest() throws Exception
 		{
 			PropertyFileUtility pUtil = new PropertyFileUtility();
+			String SchemeName = "Scheme"+jUtil.getHighestRandomNumber();
 			
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
@@ -2390,7 +2417,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']")).sendKeys("Description");
 			
-			Thread.sleep(2000);
+			Thread.sleep(4000);
 			
 			driver.findElement(By.xpath("//h1[.='Add Scheme']/../following-sibling::div//input[@placeholder='Enter Description']/../../../following-sibling::div/button[.='Add']")).click();
 			
@@ -2467,15 +2494,23 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			Thread.sleep(10000);
 	        
+            driver.findElement(By.xpath("//span[.='Users']")).click();
+	        
+	        Thread.sleep(2000);
+	        
+            driver.findElement(By.xpath("//a[.='Users List']")).click();
+	        
+	        Thread.sleep(2000);
+			
 	        driver.findElement(By.xpath("//span[.='Dashboard']")).click();
 	        
 	        Thread.sleep(2000);
 	        
-	        WebElement SchemesPage = driver.findElement(By.xpath("//a[.='Scheme List']"));
+	        WebElement SchemesListElement = driver.findElement(By.xpath("//a[.='Scheme List']"));
 	        
-	        if(SchemesPage.isDisplayed())
+	        if(SchemesListElement.isDisplayed())
 	        {
-	        	System.out.println("Schemes Page Displayed");
+	        	System.out.println("Schemes List Element Page Displayed");
 	        }
 	        else
 	        {
@@ -2505,12 +2540,9 @@ public class Sprint_2_Negative_Demo_FMS {
 			driver.findElement(By.xpath("//input[@placeholder='Enter your email address']")).sendKeys("soumya@gmail.com");
 			driver.findElement(By.xpath("//input[@placeholder='Enter your password']")).sendKeys("goldsikka@2023");
 			driver.findElement(By.xpath("//button[.=' Sign In ']")).click();
-			Thread.sleep(5000);
-			
-			DashboardPage dPage = new DashboardPage(driver);
-			
 			Thread.sleep(10000);
 			
+			DashboardPage dPage = new DashboardPage(driver);
 			dPage.getSchemesDrpDwn().click();
 		    
 			Thread.sleep(2000);
@@ -2582,82 +2614,82 @@ public class Sprint_2_Negative_Demo_FMS {
 	        
 	        Thread.sleep(3000);
             
-	        try 
-		    {
         	WebElement SelectAmountDrpDwn = driver.findElement(By.xpath("//select[@id='amount']"));
 	        
-	            for(;;)
-			    {
-        		   Select s = new Select(SelectAmountDrpDwn);
-        		   s.selectByVisibleText("1000");
-			       Thread.sleep(2000);
-			 
-			       WebElement LivePriceError = driver.findElement(By.xpath("(//div[.=' Gold live Price Issue '])[2]"));
-	    		   if(LivePriceError.isDisplayed())
-				   {
-	    			   s.selectByVisibleText("1000");
-	    			   break;
-				   }
-			    }
-		    }
-			    catch (Exception e) 
-			    {
-					Thread.sleep(1000);
+        	Select s = new Select(SelectAmountDrpDwn);
+ 		    s.selectByVisibleText("1000");
+		    Thread.sleep(2000);
+	        
+			try 
+			{
+				WebElement LivePriceError = driver.findElement(By.xpath("(//div[.=' Gold live Price Issue '])[2]"));
+				
+				if(LivePriceError.isDisplayed())
+				{
+	 			   driver.quit(); 			   
 				}
+			} 
+			catch (Exception e) 
+			{
+				Thread.sleep(1000);
 			    
-    		        WebElement MonthsDrpDwn = driver.findElement(By.xpath("//select[@formcontrolname='total_installments']"));
-    		        Select ss = new Select(MonthsDrpDwn);
-    		        ss.selectByVisibleText("12 Months");
-    		        
-    		        Thread.sleep(2000);
-    		        
-    		        wUtil.scrollPageDown();
-    		        
-    		        Thread.sleep(2000);
-    		        
-    		        WebElement TermsAndConditionsCheckBox = driver.findElement(By.xpath("//div[@class='form-group pt-2 d-block']/div/input[@type='checkbox']"));
-    		        TermsAndConditionsCheckBox.click();
-    		        
-    		        Thread.sleep(2000);
-    		        
-    		        driver.findElement(By.xpath("//button[text()=' Start Subscription ']")).click();
-    		        
-    		        Thread.sleep(2000);
-    		        
-    		        WebElement Frame = driver.findElement(By.xpath("//iframe[@class='razorpay-checkout-frame']"));
-    		        
-    		        driver.switchTo().frame(Frame);
-    		        Thread.sleep(2000);
-    				
-    		        driver.findElement(By.xpath("//input[@id='contact']")).sendKeys("6309631698",Keys.ENTER);
-    		        
-    		        Thread.sleep(2000);
-    		        
-    		        driver.findElement(By.xpath("//button[.='Pay Now']"));
-    		        
-    		        Thread.sleep(2000);
-    		        
-    				WebElement PayNowBtn = driver.findElement(By.xpath("//button[.='Pay Now']"));
-    				
-    				if (PayNowBtn.isDisplayed()) 
-    				{
-    					wUtil.takeScreenShot(driver, "a32_clickingOnPayNowBtnWithOutSelectingPaymentModeTest");
-    				}
-    				else  
-    				{
-    	                System.out.println("Scheme Created Successfully");
-    				}
-    				
-    				try 
-    				{
-    					Thread.sleep(2000);
-    				} 
-    				finally 
-    				{
-    					driver.quit();
-    				}
-    				
+				WebElement MonthsDrpDwn = driver.findElement(By.xpath("//select[@formcontrolname='total_installments']"));
+		        Select ss = new Select(MonthsDrpDwn);
+		        ss.selectByVisibleText("12 Months");
+		        
+		        Thread.sleep(2000);
+		        
+		        wUtil.scrollPageDown();
+		        
+		        Thread.sleep(2000);
+		        
+		        WebElement TermsAndConditionsCheckBox = driver.findElement(By.xpath("//div[@class='form-group pt-2 d-block']/div/input[@type='checkbox']"));
+		        TermsAndConditionsCheckBox.click();
+		        
+		        Thread.sleep(2000);
+		        
+		        driver.findElement(By.xpath("//button[text()=' Start Subscription ']")).click();
+		        
+		        Thread.sleep(2000);
+		        
+		        WebElement Frame = driver.findElement(By.xpath("//iframe[@class='razorpay-checkout-frame']"));
+		        
+		        driver.switchTo().frame(Frame);
+		        Thread.sleep(2000);
+				
+		        driver.findElement(By.xpath("//input[@id='contact']")).sendKeys("6309631698",Keys.ENTER);
+		        
+		        Thread.sleep(2000);
+		        
+		        driver.findElement(By.xpath("//button[.='Pay Now']"));
+		        
+		        Thread.sleep(2000);
+		        
+				WebElement PayNowBtn = driver.findElement(By.xpath("//button[.='Pay Now']"));
+				
+				if (PayNowBtn.isDisplayed()) 
+				{
+					wUtil.takeScreenShot(driver, "a32_clickingOnPayNowBtnWithOutSelectingPaymentModeTest");
 				}
+				else  
+				{
+	                System.out.println("Scheme Created Successfully");
+				}
+				
+			}
+			
+			try 
+			{
+				Thread.sleep(2000);
+			} 
+			finally 
+			{
+				driver.quit();
+			}
+			    
+    		        
+    				
+	}
 		
 		@Test(groups = "sprint-2", priority = 33)
 		public void a33_clickingOnUPIorQRAndClickOnUpiIdOrMobileNumberCheckBoxErrorTest() throws Exception
@@ -2679,7 +2711,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("(//input[@autocomplete='one-time-code'])[1]")).sendKeys("123456");
 			
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 	        
 	        driver.findElement(By.xpath("//span[.='Schemes']")).click();
 	        
@@ -2795,7 +2827,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("(//input[@autocomplete='one-time-code'])[1]")).sendKeys("123456");
 			
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 	        
 	        driver.findElement(By.xpath("//span[.='Schemes']")).click();
 	        
@@ -2930,7 +2962,7 @@ public class Sprint_2_Negative_Demo_FMS {
 			
 			driver.findElement(By.xpath("(//input[@autocomplete='one-time-code'])[1]")).sendKeys("123456");
 			
-			Thread.sleep(5000);
+			Thread.sleep(10000);
 	        
 	        driver.findElement(By.xpath("//span[.='Schemes']")).click();
 	        
@@ -3108,7 +3140,6 @@ public class Sprint_2_Negative_Demo_FMS {
 			try 
 			{
 				Thread.sleep(2000);
-				driver.findElement(By.xpath("a"));
 			} 
 			finally 
 			{
